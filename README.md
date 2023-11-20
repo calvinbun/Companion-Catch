@@ -1,7 +1,7 @@
 # CompanionCatch
 Fall Detection App
 
-Go to this website: https://www.anaconda.com/download/ (Checked: Latest Version 11/19/2023)
+Go to this website: https://www.anaconda.com/download/ (Checked: Latest Version 11/19/2023)<br>
 Download anaconda from this website right at the top.
 
 Search "Anaconda Prompt (anaconda3)" in Windwows Search Bar, then press enter to go into the prompt
@@ -26,7 +26,7 @@ Go to Downloads
 Right Click the ZIP file and press extract all, then press extract
 Now you can delete the ZIP file
 
-Go back to the Anaconda Prompt and paste this:
-cd /../..
-cd %USERPROFILE%\Downloads\Companion-Catch-main\Companion-Catch-main
+Go back to the Anaconda Prompt and paste this:<br>
+cd /../..<br>
+cd %USERPROFILE%\Downloads\Companion-Catch-main\Companion-Catch-main<br>
 python app.py
