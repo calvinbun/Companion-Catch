@@ -7,6 +7,27 @@ from PyQt5.QtCore import Qt, QTimer, QPoint
 from PyQt5.QtGui import QImage, QPixmap, QPainter, QPen, QColor, QFont
 from PyQt5.QtWidgets import QMessageBox
 
+import wx
+
+class Frame(wx.Frame):
+    def __init__(self, title):
+        wx.Frame.__init__(self, None, title=title, size=(600,400))
+
+        self.panel = wx.Panel(self)
+        box = wx.BoxSizer(wx.VERTICAL)
+        m_text = wx.StaticText(self.panel, -1, 'Fall Detected! Please check the app!')
+        m_text.SetSize(m_text.GetBestSize())
+
+        box.Add(m_text, 0, wx.ALL, 10)
+        self.panel.SetSizer(box)
+        self.panel.Layout()
+
+        self.timer = wx.Timer(self)
+        self.Bind(wx.EVT_TIMER, self.onClose, self.timer)
+        self.timer.Start(3000)
+
+    def onClose(self, event):
+        self.Close()
 
 
 
@@ -276,7 +297,7 @@ class PoseDetectionApp(QMainWindow):
             # Draw a red bounding box around the detected skeleton
         self.label.setPixmap(pixmap)
 
-    popup_time = 3
+    
     def draw_alert_message(self, pixmap):
         painter = QPainter(pixmap)
         pen = QPen()
@@ -290,10 +311,11 @@ class PoseDetectionApp(QMainWindow):
         rect = self.label.rect()
         rect.setTop(100)  # Adjust the position of the alert message
         painter.drawText(rect, Qt.AlignCenter, self.alert_message)
-        if self.alert_message == "FALLING":
-          while popup_time > 0:
-              self.show_popup()
-              popup_time -= 1
+        if self.alert_message == "FALLING":#-----------------------------------
+            app = wx.App(redirect=True)
+            top = Frame('Companion Catch')
+            top.Show()
+            app.MainLoop()
 
     def closeEvent(self, event):
         self.cap.release()
