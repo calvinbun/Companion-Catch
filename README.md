@@ -4,7 +4,7 @@ Fall Detection App
 Go to this website: https://www.anaconda.com/download/ (Checked: Latest Version 11/19/2023)<br>
 Download anaconda from this website right at the top.
 
-Search "Anaconda Prompt (anaconda3)" in Windwows Search Bar, then press enter to go into the prompt
+Search "Anaconda Prompt (anaconda3)" in Windows Search Bar, then press enter to go into the prompt
 
 Run these commands in Anaconda Prompt (anaconda3); Please Paste 1 by 1:<br>
 conda update -n base -c defaults conda<br>
