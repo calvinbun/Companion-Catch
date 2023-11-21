@@ -7,16 +7,17 @@ Download anaconda from this website right at the top.
 Search "Anaconda Prompt (anaconda3)" in Windows Search Bar, then press enter to go into the prompt
 
 Run these commands in Anaconda Prompt (anaconda3); Please Paste 1 by 1:<br>
+FOR THESE COMMANDS IT MAY ASK YOU TO PRESS "Yes"; type "y" and enter. <br>
 conda update -n base -c defaults conda<br>
-conda create -n myenv python=3.9                                          (Press y if it asks you to)<br>
+conda create -n myenv python=3.9
 conda activate myenv<br>
-conda install pytorch torchvision torchaudio cpuonly -c pytorch           (Press y if it asks you to)<br>
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
 conda install opencv<br>
 conda install -c conda-forge wxpython <br>
 pip install mediapipe<br>
-conda install pyqt                                                        (Press y if it asks you to)<br>
-conda install tqdm                                                        (Press y if it asks you to)<br>
-conda install tensorboard                                                 (Press y if it asks you to)<br>
+conda install pyqt
+conda install tqdm
+conda install tensorboard
 
 DON'T CLOSE THIS YET
 
