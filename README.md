@@ -8,10 +8,11 @@ Search "Anaconda Prompt (anaconda3)" in Windwows Search Bar, then press enter to
 
 Run these commands in Anaconda Prompt (anaconda3); Please Paste 1 by 1:<br>
 conda update -n base -c defaults conda<br>
-conda create -n myenv python=3.8                                          (Press y if it asks you to)<br>
+conda create -n myenv python=3.9                                          (Press y if it asks you to)<br>
 conda activate myenv<br>
 conda install pytorch torchvision torchaudio cpuonly -c pytorch           (Press y if it asks you to)<br>
 conda install opencv<br>
+conda install -c conda-forge wxpython <br>
 pip install mediapipe<br>
 conda install pyqt                                                        (Press y if it asks you to)<br>
 conda install tqdm                                                        (Press y if it asks you to)<br>
